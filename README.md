@@ -1,5 +1,5 @@
 # EduTrack
-> **Role-Based Assignment Management Dashboard — Built for the Top 1% of Frontend Submissions**
+> **Assignment management for students and professors — two roles, two experiences, one coherent system.**
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -16,7 +16,17 @@ https://edutrack-dashboard.netlify.app
 
 ## ➡️ Overview
 
-EduTrack is a production-quality, role-gated assignment management system built as a frontend engineering assignment. It demonstrates advanced React patterns, animated UI, real role-based data isolation, and a design system built from scratch — all without a backend.
+EduTrack is an assignment management platform for students and 
+professors. Professors create assignments with Drive links, monitor 
+who has submitted and who hasn't, and get analytics on class 
+performance. Students see exactly what's due, confirm their 
+submissions through a verified flow, and track their progress 
+in real time.
+
+Built as a complete frontend system — role-based routing, animated 
+dashboards, a five-chart analytics suite, kanban assignment management, 
+and a full design system — using React, GSAP, Framer Motion, and 
+Recharts.
 
 ### Why this stands out
 
