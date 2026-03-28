@@ -45,20 +45,21 @@ Recharts.
 ### State Flow
 ```mermaid
 flowchart TD
-    A[Login Page] -->|role + user selected| B[AppContext / useReducer]
+    A[Login Page] -->|role and user selected| B[AppContext useReducer]
     B -->|role = student| C[Student Shell]
     B -->|role = admin| D[Admin Shell]
 
-    C --> C1[Dashboard — Progress Ring + Priority Assignments]
-    C --> C2[Assignments — Full List + Search + Filter]
+    C --> C1[Dashboard - Progress Ring and Priority Assignments]
+    C --> C2[Assignments - Full List and Search and Filter]
 
-    D --> D1[Dashboard — Metrics + Chart + Accordion]
-    D --> D2[Assignments — Kanban Board]
-    D --> D3[Analytics — 5 Charts + Insights + Leaderboard]
+    D --> D1[Dashboard - Metrics and Chart and Accordion]
+    D --> D2[Assignments - Kanban Board]
+    D --> D3[Analytics - 5 Charts and Insights and Leaderboard]
 
-    C1 & C2 -->|Mark Submitted| E[SubmitModal]
+    C1 -->|Mark Submitted| E[SubmitModal]
+    C2 -->|Mark Submitted| E[SubmitModal]
     E -->|confirmed| F[SUBMIT_ASSIGNMENT dispatch]
-    F --> G[Confetti + UndoSnackbar]
+    F --> G[Confetti and UndoSnackbar]
     G -->|within 5s| H[UNDO_SUBMISSION dispatch]
 
     B --> I[(localStorage persistence)]
