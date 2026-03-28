@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    background-color: #F5F2EA;
+    color: #1A1A14;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark .text-muted {
+    color: rgba(245, 242, 234, 0.65);
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #D9D3C0; border-radius: 99px; }
+}
+
+@layer components {
+  .skeleton {
+    background: linear-gradient(90deg, #EDE8DA 25%, #D9D3C0 50%, #EDE8DA 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.6s infinite;
+    border-radius: 6px;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .progress-fill {
+    transition: width 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  }
+
+  .snackbar-progress {
+    animation: deplete linear forwards;
+  }
+
+  @keyframes deplete {
+    from { width: 100%; }
+    to   { width: 0%; }
+  }
+}
